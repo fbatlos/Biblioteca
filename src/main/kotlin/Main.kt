@@ -1,6 +1,9 @@
+import kotlin.random.Random
+
 fun main() {
-    print("Dime tu id : ")
-    val id = readln()
+    print("Tu id es : ")
+    val id = Random.nextInt(99)
+    print(id)
     print("\nDime tu nombre : ")
     val nombre = readln()
     val tipoUsuario = crearUsuario(id,nombre)
@@ -42,7 +45,7 @@ fun elijeUsuariodeLibro(option:Usuario , titulo:String , autor:String , año:Int
 
 
 
-fun crearUsuario(id:String,nombre:String): Usuario {
+fun crearUsuario(id:Int,nombre:String): Usuario {
     println("Que tipo de usuario eres?\n(1)Estudiante\n(2)Profesor\n(3)Visitante")
     val tipoUsuario = readln()
     when(tipoUsuario){
