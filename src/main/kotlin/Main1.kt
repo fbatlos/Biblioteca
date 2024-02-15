@@ -24,6 +24,7 @@ fun main(){
     listaArmas.add(bazooka1)
     val coche1 = coche()
     listaArmas.add(coche1)
+
     val disparos = (1..12).map { listaArmas.random() to (1..3).random() }
     var cont = 1
     println("Munición Extra = ${ArmaDeFuego.cantidadMunicionExtra} ... para todas las armas de fuego.")
@@ -36,9 +37,11 @@ fun main(){
             println(disparo.first.toString())
         }
         cont++
+    //(1..9).forEach {_ -> listaArmas.random().dispara()}
     }
+}
 
-    //(1..9).forEach {_ -> listarma.ramdom.dispara}
+
     /*
     * otra forma de hacerlo :
     *
@@ -50,4 +53,4 @@ fun main(){
     * }
     * }
     * */
-}
+
