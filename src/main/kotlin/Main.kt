@@ -7,10 +7,13 @@ fun main() {
 
     print("\nDesea un libro? s/n ")
     val respuesta = readln()
-    if (respuesta.uppercase() == "S"){
-        val libroAdevolver = elegirLibro(tipoUsuario)
+    try {
+        if (respuesta.uppercase() == "S") {
+            val libroAdevolver = elegirLibro(tipoUsuario)
+        }
+    }catch (_:NumberFormatException){
+        println("No me has dado un numero")
     }
-
 }
 
 fun elijeUsuariodeLibro(option:Usuario , titulo:String , autor:String , año:Int){
